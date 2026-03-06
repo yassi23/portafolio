@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio | Yassi </title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0f0b;
+color:#e8ffe8;
+overflow-x:hidden;
+}
+
+
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#081208;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+z-index:100;
+border-bottom:1px solid #123;
+}
+
+nav h2{
+color:#7cffb2;
+}
+
+nav a{
+color:#caffdf;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+nav a:hover{
+color:#7cffb2;
+}
+
+
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #00ff9c;
+margin-bottom:20px;
+object-fit:cover;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#00ff9c;
+}
+
+.hero p{
+max-width:600px;
+color:#b7d8c2;
+}
+
+.btn{
+margin-top:20px;
+padding:10px 25px;
+background:#0c2b1a;
+color:#7cffb2;
+border-radius:20px;
+text-decoration:none;
+display:inline-block;
+}
+
+
+
+section{
+padding:80px 10%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:40px;
+color:#7cffb2;
+}
+
+
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#b7d8c2;
+}
+
+
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill p{
+margin-bottom:5px;
+}
+
+.bar{
+width:100%;
+background:#1a2b1f;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress{
+height:10px;
+background:#00ff9c;
+}
+
+
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#0f1f15;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+background:#0c2b1a;
+color:#7cffb2;
+border-radius:20px;
+text-decoration:none;
+}
+
+.contact a:hover{
+background:#123d2a;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#081208;
+color:#7cffb2;
+}
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+transition:0.3s;
+z-index:1000;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav>
+
+<h2>YassiDev</h2>
+
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#sobre">Sobre mí</a>
+<a href="#skills">Habilidades</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
+
+
+<div class="hero" id="inicio">
+
+<img src="./yassi.jpeg" alt="foto">
+
+<h1>Hola, soy <span>Yassi</span></h1>
+
+<p>
+Estudiante de Desarrollo de Software en SENATI.
+Apasionado por la programación y la tecnología.
+</p>
+
+<a href="#proyectos" class="btn">Ver proyectos</a>
+
+</div>
+
+
+
+<section id="sobre">
+
+<h2>Sobre mí</h2>
+
+<div class="about">
+
+<p>
+Soy una persona organizada y con muchas ganas de aprender.
+Actualmente curso el 5to semestre en SENATI.
+</p>
+
+<p>
+Lenguajes que manejo: PHP y Python.
+Me gusta el deporte y la tecnología.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="skills">
+
+<h2>Habilidades</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="progress" style="width:65%"></div></div>
+</div>
+
+<div class="skill">
+<p>PHP</p>
+<div class="bar"><div class="progress" style="width:70%"></div></div>
+</div>
+
+<div class="skill">
+<p>Python</p>
+<div class="bar"><div class="progress" style="width:60%"></div></div>
+</div>
+
+</section>
+
+
+
+<section id="proyectos">
+
+<h2>Proyectos</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>CIATEL</h3>
+<p>Página web frontend con HTML, Python y JavaScript.</p>
+<img src="ciatel.jpeg">
+</div>
+
+<div class="card">
+<h3>Sistema de Inventarios</h3>
+<p>Sistema desarrollado con PHP, HTML, CSS y JS.</p>
+<img src="hilos.jpeg">
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+<h2>Contacto</h2>
+
+<div class="contact">
+
+<a href="mailto:yassifernando8@gmail.com">
+📧 Correo
+</a>
+
+<a href="https://wa.me/51923939365?text=Hola%20Yassi,%20vi%20tu%20portafolio%20y%20quiero%20contactarte" target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2025 Yassi 
+
+</footer>
+
+
+<a href="https://wa.me/51923939365?text=Hola%20Yassi,%20vi%20tu%20portafolio" class="whatsapp-float" target="_blank">
+💬
+</a>
+
+<script>
+
+
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<100;i++){
+
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*3,
+speedX:(Math.random()-0.5),
+speedY:(Math.random()-0.5)
+})
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+p.x+=p.speedX;
+p.y+=p.speedY;
+
+if(p.x>canvas.width)p.x=0;
+if(p.x<0)p.x=canvas.width;
+if(p.y>canvas.height)p.y=0;
+if(p.y<0)p.y=canvas.height;
+
+ctx.fillStyle="rgba(0,255,150,0.7)";
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fill();
+
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate();
+
+</script>
+
+</body>
+</html>
